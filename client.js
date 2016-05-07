@@ -7,7 +7,6 @@ var cheerio = require('cheerio');
 
 router.get('/:url', function(req, res) {
     var url=req.params.url;
-    console.log(url);
 
     Promise.all([sfFile.read('./'+url+'.html', 'utf8')])
         .then(function (files) {
